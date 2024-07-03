@@ -6,16 +6,17 @@ jobs:
     runs_on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
+    - name: checkout code
+      uses: action/checkout@v4
 
     - name: Set up Python
       uses: actions/setup-python@v5
       with: 
-        python-version: '3.8'
+        python-version: 3.8
 
     - name: Install Bandit
       run: pip install bandit
 
     - name: Run Bandit Scan
       run: bandit -r .
+      
