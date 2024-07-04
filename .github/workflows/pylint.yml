@@ -41,7 +41,7 @@ jobs:
         docker_version: '20.10.7'
 
     - name: Build Docker image_scan
-      run: docker build -f Dockerfile -t pygoat:latest
+      run: docker buildx build -f Dockerfile -t pygoat:latest
 
     - name: Docker Scout Scan
       run: |
